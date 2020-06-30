@@ -3,7 +3,18 @@
     <p>shopping-list works!</p>
     <app-shopping-list-edit></app-shopping-list-edit>
     <hr>
-    <p>The list</p>
+    <ul class="list-group">
+      <li *ngFor="let ing of ingredients" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ ing.name }}
+        <span class="badge badge-primary badge-pill">{{ ing.amount }}</span>
+        <!-- <span class="badge badge-primary badge-pill">{{ ing.unitOfMeasurement }}</span> -->
+      </li>
+    </ul>
+
+
+    <br>
+    <br>
+    <br>
   <!-- </div>
 </div> -->
 
